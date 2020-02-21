@@ -1,6 +1,6 @@
-sel = hou.selectedNodes()
+selection = hou.selectedNodes()
 node_list = []
-for nodes in sel :
+for nodes in selection :
     kids = nodes.children()
     for node in kids :
         if "Spine" in node.name():
