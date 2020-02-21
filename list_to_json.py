@@ -4,10 +4,10 @@ import json
 my_path = os.environ["HIP"]
 my_file = "my_file.json"
 database = os.path.join(my_path, my_file)
-sel = hou.selectedNodes()
+selection = hou.selectedNodes()
 
 json_data = []
-for nodes in sel:
+for nodes in selection:
     kids = nodes.children()
     for node in kids:
         json_data.append(node.name())
